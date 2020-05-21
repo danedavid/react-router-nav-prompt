@@ -31,6 +31,7 @@
     "@babel/core": "^7.9.6",
     "@babel/preset-flow": "^7.9.0",
     "flow-bin": "^0.125.1",
-    "npm-watch": "^0.6.0"
+    "npm-watch": "^0.6.0",
+    "react-router-dom": "^5.2.0"
   }
 }
