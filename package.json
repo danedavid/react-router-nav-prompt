@@ -2,14 +2,36 @@
   "name": "react-router-nav-prompt",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "babel src/ --out-dir dist/",
+    "prepublish": "yarn run build",
+    "flow": "flow",
+    "dev": "npm-watch"
+  },
+  "watch": {
+    "build": {
+      "patterns": [
+        "src"
+      ],
+      "extensions": "js",
+      "quiet": false,
+      "delay": 500
+    }
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "peerDependencies": {
+    "react": "^16.13.1",
+    "react-router-dom": "^5.2.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.6",
+    "@babel/preset-flow": "^7.9.0",
+    "flow-bin": "^0.125.1",
+    "npm-watch": "^0.6.0",
     "react": "^16.13.1",
     "react-router-dom": "^5.2.0"
   }
