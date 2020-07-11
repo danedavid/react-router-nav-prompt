@@ -1,11 +1,11 @@
 {
   "name": "react-router-nav-prompt",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "",
   "main": "dist/index.js",
   "scripts": {
     "build": "babel src/ --out-dir dist/",
-    "prepublish": "yarn run build",
+    "prepare": "yarn run build",
     "flow": "flow",
     "dev": "npm-watch"
   },
