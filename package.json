@@ -19,9 +19,17 @@
       "delay": 500
     }
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "react",
+    "react-hooks",
+    "react-router"
+  ],
+  "author": "Dane David <dndavid102@gmail.com> (https://github.com/danedavid)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/danedavid/react-router-nav-prompt"
+  },
+  "license": "MIT",
   "peerDependencies": {
     "react": "^16.13.1",
     "react-router-dom": "^5.2.0"
