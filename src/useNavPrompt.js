@@ -25,6 +25,8 @@ const useNavPrompt = ({
         // need to use ref?
         setBlocked(true);
         _navPath.current = location.pathname;
+        // $FlowFixMe - See https://github.com/ReactTraining/history/issues/728
+        return false;
       });
 
       return () => {
@@ -35,22 +37,24 @@ const useNavPrompt = ({
     }
   }, [shouldBlock]);
 
-  const unblock = () => {
+  const navigate = () => {
     if ( _unblock.current ) {
       _unblock.current();
       setBlocked(false);
-      _navPath.current && history.push(_navPath.current);
+      if ( _navPath.current ) {
+        history.push(_navPath.current);
+      }
     }
   };
 
-  const stay = () => {
+  const hidePrompt = () => {
     setBlocked(false);
   };
 
   return {
     blocked,
-    unblock,
-    stay,
+    navigate,
+    hidePrompt,
   };
 }
 

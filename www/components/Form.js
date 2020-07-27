@@ -8,8 +8,8 @@ export default () => {
 
   const {
     blocked,
-    unblock,
-    stay,
+    hidePrompt,
+    navigate,
   } = useNavPrompt({
     shouldBlock: Boolean(text),
   });
@@ -26,7 +26,7 @@ export default () => {
             <button
               onClick={() => {
                 //stay here
-                stay();
+                hidePrompt();
               }}
             >
               Stay here, complete the form
@@ -34,7 +34,7 @@ export default () => {
             <button
               onClick={() => {
                 //go
-                unblock();
+                navigate();
               }}
             >
               No, wanna go back

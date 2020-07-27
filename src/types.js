@@ -1,8 +1,8 @@
 // @flow
 export type NavPromptConfig = {
   blocked: boolean,
-  unblock: () => void,
-  stay: () => void,
+  navigate: () => void,
+  hidePrompt: () => void,
 };
 
 export type NavPromptParams = {

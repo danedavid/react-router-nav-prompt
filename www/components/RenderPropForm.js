@@ -10,8 +10,8 @@ export default () => {
       <NavPrompt shouldBlock={Boolean(text)}>
         {({
           blocked,
-          unblock,
-          stay,
+          hidePrompt,
+          navigate,
         }) => (
           blocked
           ? (
@@ -23,7 +23,7 @@ export default () => {
                 <button
                   onClick={() => {
                     //stay here
-                    stay();
+                    hidePrompt();
                   }}
                 >
                   Stay here, complete the form
@@ -31,7 +31,7 @@ export default () => {
                 <button
                   onClick={() => {
                     //go
-                    unblock();
+                    navigate();
                   }}
                 >
                   No, wanna go back
