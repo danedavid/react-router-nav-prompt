@@ -52,7 +52,18 @@ export default () => {
             />
           </div>
           <div><Link to="/">Cancel & go back</Link></div>
-          <div><Link to="/">Submit & Back</Link></div>
+          <div>
+            <a
+              onClick={() => {
+                setText('');
+                setTimeout(() => {
+                  history.push('/')
+                }, 0);
+              }}
+            >
+              Submit & Back
+            </a>
+          </div>
         </>
       )}
     </div>

@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import { NavPrompt } from 'react-router-nav-prompt';
 
 export default () => {
   const [text, setText] = useState('');
+  const history = useHistory();
 
   return (
     <div>
@@ -49,7 +50,18 @@ export default () => {
                 />
               </div>
               <div><Link to="/">Cancel & go back</Link></div>
-              <div><Link to="/">Submit & Back</Link></div>
+              <div>
+                <a
+                  onClick={() => {
+                    setText('');
+                    setTimeout(() => {
+                      history.push('/')
+                    }, 0);
+                  }}
+                >
+                  Submit & Back
+                </a>
+              </div>
             </>
           )
         )}
