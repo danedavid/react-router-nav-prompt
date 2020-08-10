@@ -4,6 +4,8 @@
 
 ## Usage
 
+Installation: `npm i --save react-router-nav-prompt`
+
 `useNavPrompt`:
 ```JSX
 import { useNavPrompt } from 'react-router-nav-prompt';
