@@ -24,7 +24,7 @@ const useNavPrompt = ({
       _unblock.current = history.block((location: Location) => {
         // need to use ref?
         setBlocked(true);
-        _navPath.current = location.pathname;
+        _navPath.current = location.pathname + location.search;
         // $FlowFixMe - See https://github.com/ReactTraining/history/issues/728
         return false;
       });

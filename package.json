@@ -1,6 +1,6 @@
 {
   "name": "react-router-nav-prompt",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "Customisable prompt for React Router",
   "main": "dist/index.js",
   "scripts": {
